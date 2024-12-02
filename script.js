@@ -7,9 +7,11 @@ function validate(e){
     let name = e.target.name.value;
     let address = e.target.address.value;
     let email = e.target.email.value;
+    let password= e.target.password.value;
     let phone = e.target.phone.value;
     let emailpattern= "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-
+    let gender = document.querySelector('input[name="gender"]:checked');
+    
     if(!name){
         alert("Name is required");
         return false;
@@ -24,6 +26,10 @@ function validate(e){
         return false;
     }
 
+    if(!password){
+        alert("Password is required");
+        return false;
+    }
     if(!(email.match(emailpattern))){
         alert("Invalid Email");
         return false;
@@ -38,7 +44,10 @@ function validate(e){
         return false;
     }
     
-    
+    if (!gender) {
+        alert("Gender Specification Required");
+        return false;
+    }
     form.submit();
 }
 

@@ -6,12 +6,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <?php
-        // echo json_decode($_POST['message']);
-        if (isset($_POST['message'])) {
-            echo '<div>'. $_POST['message'] .'</div>';
-        }
-    ?>
     <header>
         <h1>Fill out the Form</h1>
     </header>
@@ -25,10 +19,17 @@
         
         <label for="email">Email:</label>
         <input type="text" id="email" name="email"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
         
         <label for="phone">Phone:</label>
         <input type="tel" id="phone" name="phone"><br><br>
-        
+
+        Gender:
+        <label for="male">Male</label><input type="radio" id="male" name="gender" value="male">
+        <label for="female">Female</label><input type="radio" name="gender" value="female">
+        <br><br>
         <button type="submit" name="action" value="insert">Submit</button>
     </form>
     </div>
